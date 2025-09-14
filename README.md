@@ -1,4 +1,4 @@
-# Players App — In‑Process & Multi‑Process Messaging (Pure Java)
+<img width="3612" height="3840" alt="image" src="https://github.com/user-attachments/assets/dbf76475-4d1b-4f81-9dd0-e77e9dd6a19d" /># Players App — In‑Process & Multi‑Process Messaging
 
 This project implements two communicating **Player** instances:
 
@@ -58,6 +58,8 @@ Each class has Javadoc documenting its responsibilities.
 * `A` (initiator) and `B` (responder) call `start()`, which registers their listeners.
 * `A` creates `CountDownLatch(10)` and calls `startConversation("B","hello",10,latch)`.
 
+  <img width="3020" height="3840" alt="image" src="https://github.com/user-attachments/assets/e8e4740a-cecf-40bb-be74-6b6f879194e8" />
+
 **Delivery model (updated)**
 
 * `InMemoryTransport` uses a **single-threaded mailbox per player** (strict FIFO), with a **bounded queue** and **CallerRuns** backpressure. No global cached pool.
@@ -85,6 +87,9 @@ Each class has Javadoc documenting its responsibilities.
 * `TcpResponderMain` listens (single client).
 * `TcpInitiatorMain` connects on loopback using blocking I/O with **newline-framed** messages (`readLine` / `write("\n")`).
 
+  
+<img width="3612" height="3840" alt="image" src="https://github.com/user-attachments/assets/c313f20c-a4a7-4d55-a97a-72d29995ad91" />
+
 **Round-trip loop (10 times)**
 
 1. Initiator increments its own counter and writes `"hello #<A_n>\n"`.
@@ -96,5 +101,4 @@ Each class has Javadoc documenting its responsibilities.
 * Initiator writes `"BYE\n"`.
 * Responder replies `"BYE-ACK\n"` and exits; initiator reads the ACK and exits.
 
-**Why this is sturdy now**
 
