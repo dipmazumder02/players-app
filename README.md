@@ -28,7 +28,7 @@ Expected logs show 10 exchanges and shutdown.
 ./run_tcp_two_processes.sh
 ```
 
-This script starts the responder on port 5000 and then runs the initiator against it.
+This script starts the responder on port 8082 and then runs the initiator against it.
 
 ---
 
