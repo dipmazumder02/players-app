@@ -1,4 +1,4 @@
-<img width="3612" height="3840" alt="image" src="https://github.com/user-attachments/assets/dbf76475-4d1b-4f81-9dd0-e77e9dd6a19d" /># Players App — In‑Process & Multi‑Process Messaging
+# Players App — In‑Process & Multi‑Process Messaging
 
 This project implements two communicating **Player** instances:
 
