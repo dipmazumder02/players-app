@@ -31,7 +31,17 @@ Expected logs show 10 exchanges and shutdown.
 This script starts the responder on port 8082 and then runs the initiator against it.
 
 ---
+## Running tests
 
+This project now includes **unit tests** for `Player` and `InMemoryTransport`.
+
+To run them:
+
+```bash
+mvn clean test
+```
+
+---
 ## Design overview
 
 - `Player`: encapsulates identity, send counter, and behavior for receiving & replying.
